@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Nice gradient background */
+    background: linear-gradient(135deg, #1e1e2f, #3a0ca3, #7209b7);
+
+    /* Makes gradient smoother */
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+
+    /* subtle glass effect */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.page-wrapper {
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+p {
+    color: #e0e0e0;
+    font-size: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.images-panel,
+.boxes-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    gap: 20px;
+}
+
+.draggable {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    justify-self: center;
+    border: 3px solid #222;
+    border-radius: 12px;
+    background-color: #ffa94d;
+    cursor: grab;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.draggable:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.drop-box {
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+    border: 3px solid #111;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.20);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.drop-box.hovered {
+    background: linear-gradient(135deg, #8e24aa, #ba68c8);
+    transform: scale(1.04);
+    box-shadow: 0 0 18px rgba(156, 39, 176, 0.55);
+}
+
+.drop-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+    background: none;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        gap: 30px;
+    }
+
+    .images-panel,
+    .boxes-panel {
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .drop-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .draggable {
+        width: 105px;
+        height: 105px;
+    }
+}

@@ -1,0 +1,18 @@
+.management { max-width: 1060px; margin: 5rem auto; padding: 2rem; color: #e7eefc; font-family: system-ui, sans-serif; }
+.management h1, .management h2 { color: #f6f9ff; margin-bottom: 1rem; }
+.management .mg-card { border: 1px solid #37465e; background: #141e30; padding: 1.5rem; border-radius: 12px; margin: 1rem 0; }
+.management .mg-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.management form { display: flex; flex-wrap: wrap; flex-direction: column; gap: 1rem; max-width: 600px; }
+.management label { display: grid; gap: .35rem; text-transform: capitalize; }
+.management input { padding: .7rem; border-radius: 7px; background: #f7f9fd; color: #102038; border: 1px solid #73839d; }
+.management button { padding: .75rem 1rem; border: 1px solid #7390b7; border-radius: 7px; color: white; background: #284b7b; cursor: pointer; }
+.management button:disabled { opacity: .6; cursor: not-allowed; }
+.management .mg-link { background: transparent; border: none; text-decoration: underline; margin-top: .7rem; }
+.management .mg-tabs, .management .mg-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+.management .mg-tabs button.selected { background: #577eb0; }
+.management .mg-records { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.management .mg-record { background: #202d43; padding: 1rem; border-radius: 8px; overflow-wrap: anywhere; }
+.management .mg-record small { display: block; margin: .8rem 0; opacity: .8; }
+.management .message { padding: 1rem; border-radius: 8px; }
+.management .error { color: #ffd4d4; background: #6b2934; }
+.management .success { color: #d2ffe0; background: #20563a; }
